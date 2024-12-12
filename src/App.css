@@ -1,0 +1,32 @@
+#root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Trap;
+}
+
+.box-shadow {
+  box-shadow: 20px 5px 20px 0px #0000000d;
+}
+
+.aboutsec_bg {
+  background-repeat: "no-repeat";
+  background-image: url("../src//assets/about1.png");
+  background-size: "contain";
+  background-position: "center";
+}
+
+@font-face {
+  font-family: "Trap Regular";
+  src: url("/fonts/Trap-Regular.otf") format("opentype");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Trap ExtraBold";
+  src: url("/fonts/Trap-ExtraBold.otf") format("opentype");
+
+  font-weight: normal;
+  font-style: normal;
+}
