@@ -155,19 +155,19 @@ const Hero = () => {
             </Link>
           </section>
 
-          <section className="px-[2%] w-full h-full flex flex-col mt-[15vh] lg:mt-[7vh] uppercase text-[36px] lg:text-[64px] text-white font-trap-Regular leading-[52px] lg:leading-[6.5rem]">
+          <section className="px-[2%] w-full h-full flex flex-col mt-[15vh] lg:mt-[7vh] uppercase text-[36px] lg:text-[40px] text-white font-trap-Regular leading-[52px] lg:leading-[6.5rem]">
             <p className="font-[700]">
               SAVOR THE DELIGHT<span className="lg:hidden"> OF</span>{" "}
             </p>
             <p className="text-nowrap w-full">
               <span className="inline lg:inline font-[700] "> OF </span>
-              <span className="lg:ml-2 text-[48px] lg:text-[96px] text-secondary font-[700]">
+              <span className="lg:ml-2 text-[48px] lg:text-[66px] text-secondary font-[700]">
                 ETHIOPIAN{" "}
               </span>
             </p>
-            <p className="text-[48px] lg:text-[96px] text-secondary font-[700]  ">COFFEE</p>
+            <p className="text-[48px] lg:text-[66px] text-secondary font-[700]  ">COFFEE</p>
 
-            <p className="text-white max-w-[636px]  text-base lg:text-2xl normal-case mt-8 font-[400]">
+            <p className="text-white max-w-[636px]  text-base lg:text-2xl normal-case mt-2 font-[400]">
             Wake up to the essence of Ethiopia. Wake up to Nigat.
             </p>
           </section>

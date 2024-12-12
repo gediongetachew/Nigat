@@ -33,7 +33,7 @@ const Home = ({
       <article
         className="py-[5vh]  pb-20 relative"
         style={{
-          height: "110vh",
+          minHeight: "100dvh",
           width: "100%",
           backgroundRepeat: "no-repeat",
           backgroundImage: `url(${ABOUTBG})`,
