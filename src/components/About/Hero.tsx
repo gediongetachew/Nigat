@@ -16,9 +16,9 @@ const Hero = ({
 }) => {
   return (
     <article
-      className="pl-x-axis py-6 h-[100vh] w-full overflow-hidden"
+      className="pl-x-axis py-6 h-[100vh] w-full  "
       style={{
-        position: "absolute",
+        
         top: 0,
         left: 0,
         backgroundRepeat: "no-repeat",

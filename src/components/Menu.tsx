@@ -49,10 +49,10 @@ const Menu = ({
   };
 
   return (
-    <article className="">
+    <article className=" bg-gray-400 ]">
       <button
         type="button"
-        className={`w-[80px] lg:w-[100px] bg-white flex justify-center items-center absolute top-0 right-0 h-[10vh] border-l-8 ${
+        className={`w-[80px] lg:w-[100px] bg-white flex justify-center items-center absolute   top-0 right-0 h-[10vh] border-l-8 ${
           addborder ? " border-secondary" : "border-white"
         }`}
         style={{
@@ -68,6 +68,7 @@ const Menu = ({
           }
         />
       </button>
+      
 
       <SideMenu
         showMenu={showMenu}
@@ -116,43 +117,43 @@ const SideMenu = ({
   return (
     <article
       className={`absolute   ${
-        !showMenu && pathname === ROUTES[0]
-          ? "h-[125vh] sm:h-screen lg:h-[90vh]"
+         pathname === ROUTES[0]
+          ? "h-[125vh] sm:h-screen lg:h-[100vh] "
           : "h-screen lg:h-[140vh]"
       }   ${
-        !showMenu && (pathname === ROUTES[3] || pathname === ROUTES[4])
+        (pathname === ROUTES[3] || pathname === ROUTES[4])
           ? "w-[80px] lg:w-[100px]"
           : "w-full xl:w-2/3" 
       } ${
-        showMenu && (pathname === ROUTES[3] || pathname === ROUTES[4])
+       (pathname === ROUTES[3] || pathname === ROUTES[4])
           ? "w-[80px] lg:w-[90px]"
           : "w-full xl:w-2/3"
       }  top-0 right-0  flex justify-end z-[200]`} 
     >
       {showMenu && (
-        <div className="w-full bg-primary  ">
-          <ul className="pt-[12vh] w-full h-full bg-gradient-to-r from-primary to-[#004F56C2] opacity-100  flex flex-col items-start justify-start gap-y-0 lg:gap-y-16 pl-[10%] text-left uppercase leading-[105px]">
-            <li className="text-[22px] xl:text-[96px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+        <div className="w-full bg-primary   ">
+          <ul className="pt-[12vh] w-full h-full bg-gradient-to-r from-primary to-[#004F56C2] opacity-100  flex flex-col items-start justify-start gap-y-0 lg:gap-y-16 pl-[10%] text-left uppercase leading-[42px]">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[0]} onClick={handleMenuClick}>
                 Home
               </Link>
             </li>
-            <li className="text-[22px] xl:text-[96px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[1]} onClick={handleMenuClick}>
                 Who we are
               </Link>
             </li>
-            <li className="text-[22px] xl:text-[96px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[2]} onClick={handleMenuClick}>
                 Services
               </Link>
             </li>
-            <li className="text-[22px] xl:text-[96px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[3]} onClick={handleMenuClick}>
                 COntact us
               </Link>
             </li>
-            <li className="text-[22px] xl:text-[96px] flex justify-between text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] flex justify-between items-center text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[4]} onClick={handleMenuClick}>
                 Order Now
               </Link>
@@ -233,7 +234,7 @@ const SideMenu = ({
             </>
           )}
         </section>
-      )}
+      )} 
     </article>
   );
 };

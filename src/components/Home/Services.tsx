@@ -12,7 +12,7 @@ const Services = () => {
 
   return (
     <article
-      className="px-x-axis py-6 relative overflow-hidden min-h-screen pt-[16rem] lg:pt-0 h-[90vh] md:h-[110vh]"
+      className="px-x-axis py-6 relative overflow-hidden min-h-screen pt-[16rem] lg:pt-0 h-[90vh] md:h-[120vh]"
       style={{
         width: "100%",
       }}
@@ -25,7 +25,7 @@ const Services = () => {
           backgroundImage: `url(${BGtwo})`, // Use BGtwo for small screens
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "120vh",
+          height: "100vh",
           width: "100vw",
           position: "absolute",
           left: 0,

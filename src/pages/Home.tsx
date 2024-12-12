@@ -26,14 +26,14 @@ const Home = ({
 
   return (
     <main>
-      <div className="h-[90vh] md:h-[80vh] lg:h-[70vh] " />
+   
       <Hero />
 
       <About />
       <article
         className="py-[5vh]  pb-20 relative"
         style={{
-          minHeight: "100dvh",
+          minHeight: "100px",
           width: "100%",
           backgroundRepeat: "no-repeat",
           backgroundImage: `url(${ABOUTBG})`,

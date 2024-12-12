@@ -71,13 +71,8 @@ const Hero = () => {
     <>
       <article
         ref={ref}
-        className="px-x-axis pr-[80px]  py-6 bg-primary justify-center min-h-screen  lg:hidden"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-        }}
+        className="px-x-axis pr-[80px]  py-6 bg-primary justify-center  lg:hidden h-[100vph "
+      
       >
         <div className="w-full ">
           <section className="w-full">
@@ -132,9 +127,8 @@ const Hero = () => {
 
       <article
         ref={ref}
-        className="px-x-axis pr-[80px]  py-6 bg-primary justify-center h-screen lg:h-[90vh] hidden lg:flex overflow-hidden"
+        className="px-x-axis pr-[0px] py-6 bg-primary justify-center h-screen hidden lg:flex overflow-hidden"
         style={{
-          position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
@@ -142,20 +136,21 @@ const Hero = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           transition: "background-image 1s ease-in-out",
+          zIndex: -1,
         }}
       >
-        <div className="w-full ">
-          <section className="w-full">
-            <Link to={ROUTES[0]}>
-              <img
-                src={Logo}
-                alt="logo"
-                className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
-              />
-            </Link>
-          </section>
+        <div className="w-full h-full flex ">
+            {/* <section className="w-full">
+              <Link to={ROUTES[0]}>
+                <img
+                  src={Logo}
+                  alt="logo"
+                  className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
+                />
+              </Link>
+            </section> */}
 
-          <section className="px-[2%] w-full h-full flex flex-col mt-[15vh] lg:mt-[7vh] uppercase text-[36px] lg:text-[40px] text-white font-trap-Regular leading-[52px] lg:leading-[6.5rem]">
+          <section className="px-[2%] justify-start w-full h-[50dvp] lg:h-[20%] flex flex-col mt-[15vh] lg:mt-[20vh] uppercase text-[32px] lg:text-[64px] text-white font-trap-Regular leading-[52px] lg:leading-[5rem]">
             <p className="font-[700]">
               SAVOR THE DELIGHT<span className="lg:hidden"> OF</span>{" "}
             </p>
@@ -164,10 +159,10 @@ const Hero = () => {
               <span className="lg:ml-2 text-[48px] lg:text-[66px] text-secondary font-[700]">
                 ETHIOPIAN{" "}
               </span>
-            </p>
+            </p>  
             <p className="text-[48px] lg:text-[66px] text-secondary font-[700]  ">COFFEE</p>
 
-            <p className="text-white max-w-[636px]  text-base lg:text-2xl normal-case mt-2 font-[400]">
+            <p className="text-white max-w-[636px] text-base lg:text-2xl normal-case mt-2 font-[400]">
             Wake up to the essence of Ethiopia. Wake up to Nigat.
             </p>
           </section>
@@ -218,7 +213,7 @@ const Hero = () => {
           </section>
         </div>
 
-       {imagesLoaded && <section className={"absolute right-[92.4px] z-[400] w-2 h-screen bg-gray-200"}>
+       {imagesLoaded && <section className={"absolute right-[92.4px] z-[1000] w-2 h-[705px]  "}>
           <div
             className={"bg-secondary"}
             style={{

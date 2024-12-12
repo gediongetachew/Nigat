@@ -8,7 +8,7 @@ import { ROUTES } from "../../util/data";
 const About = () => {
   const navigate = useNavigate();
   return (
-    <article className="px-[8%] mb-12 mt-20">
+    <article className="px-[8%] mb-12 mt-0">
       <article className="flex flex-col lg:flex-row justify-between items-center font-trap-Regular gap-x-10 mb-10 ">
         <section className="lg:w-1/2">
           <h6 className="uppercase text-[36px] lg:text-[96px] pb-6 xs: pt-20 text-secondary-light font-[700]">

@@ -33,15 +33,10 @@ const Header = ({
 
   return (
     <article
-      className={`font-trap-Regular px-x-axis py-6 ${
-        showMenu
-          ? `${
-              pathname !== ROUTES[4] &&
-              "bg-gradient-to-r from-primary from-[40%] to-[#004F56C2] to-[100%] "
-            }  `
-          : "  "
-      }  h-[10vh] max-h-[116px]`}
+      className={`font-trap-Regular px-x-axis py-6 h-[10vh]  max-h-[116px] absolute right-0`}
     >
+    
+     
       <Menu
         showMenu={showMenu}
         setShowMenu={setShowMenu}
