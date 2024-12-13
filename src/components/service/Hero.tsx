@@ -16,9 +16,9 @@ const Hero = ({
 }) => {
   return (
     <article
-      className="h-[80vh] lg:h-[100vh]  w-full overflow-hidden "
+      className="h-[100vh] sm:h-[100vh]  w-full overflow-hidden mt-[12vh]"
       style={{
-        position: "absolute",
+
         top: 0,
         left: 0,
         backgroundRepeat: "no-repeat",
@@ -27,17 +27,12 @@ const Hero = ({
         backgroundPosition: "center",
       }}
     >
-      <section className="w-full bg-white h-[12vh]  lg:py-6 pl-x-axis">
-        <Link to={ROUTES[0]}>
-          <img src={Logo} alt="logo" className="w-[203px] h-[65px]" />
-        </Link>
-      </section>
-
+     
       <article className=" text-[40px] lg:text-[64px] lg:leading-[70px]  mt-16 lg:mt-[15vh] px-[5%]">
-        <h6 className="font-bold uppercase text-white text-[32px] sm:text-[40px] lg:text-4xl ">
+        <h6 className="font-bold uppercase text-white text-[32px] sm:text-[40px] lg:text-[64px] ">
           Service We Provide
         </h6>
-        <p className="font-[600] text-base text-[15px] sm:text-xl xl:text-2xl text-white leading-[26px] mt-4 lg:w-3/5">
+        <p className="font-[600] text-base text-[15px] sm:text-xl xl:text-[20px] text-white leading-[26px] mt-4 lg:w-3/5">
           At Nigat Coffee, we’re not just about coffee; we’re about sharing
           Ethiopia’s coffee culture with the world. Whether you’re savoring a
           cup in our café or exploring unique blends through tasting, we’re here
@@ -132,7 +127,7 @@ const ScrollItems = ({
       <div id="cursorItem" />
 
       <article
-        className={`scroll-tab-container overflow-hidden flex flex-row gap-6 w-full pb-6 ml-[10%] lg:ml-[20%] absolute bottom-10 lg:bottom-20 py-8 pl-6 pr-[15%] cursor-pointer ${
+        className={`scroll-tab-container overflow-hidden flex flex-row gap-6 w-full pb-6 ml-[10%] lg:ml-[20%]  bottom-10 lg:bottom-20 py-8 pl-6 pr-[15%] cursor-pointer ${
           showMenu ? "" : "z-[3000] "
         }`}
         ref={scrollRef}
@@ -145,7 +140,7 @@ const ScrollItems = ({
       >
         {ServiceHeroScrollItems.map((item) => (
           <section
-            className="bg-primary text-white w-[340px] h-[27vh] lg:h-[40vh] lg:w-full  feed max-w-[650px] pb-16 rounded-[20px] flex-shrink-0 p-6"
+            className="bg-primary text-white w-[340px] h-[30vh] lg:h-[50vh] lg:w-full  feed max-w-[650px] pb-16 rounded-[20px] flex-shrink-0 p-6"
             key={item.id}
             style={{
               backgroundRepeat: "no-repeat",
@@ -160,7 +155,7 @@ const ScrollItems = ({
 
       <Scrollprogress
         scrollProgress={scrollProgress}
-        containerClass="w-full h-[6px] bg-[#d9d9d9] absolute bottom-8 lg:bottom-12 ml-[20%] lg:ml-[22%]"
+        containerClass="w-full h-[6px] bg-[#d9d9d9] mb-10 ml-[20%] lg:ml-[22%]"
         progressClass="h-full bg-primary"
       />
     </article>

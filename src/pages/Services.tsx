@@ -12,7 +12,7 @@ const Services = ({
 }) => {
   return (
     <article className=" font-trap-Regular">
-      <div className="h-[75vh] sm:h-[80vh] md:h-[80vh] lg:h-[100vh] xl:h-[100vh]" />
+     
       <Hero showMenu={showMenu} showSideContent={showSideContent} />
       <ServicesComp showMenu={showMenu} showSideContent={showSideContent} />
       <More />

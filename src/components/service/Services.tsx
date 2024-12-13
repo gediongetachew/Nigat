@@ -18,22 +18,23 @@ const ServicesComp = ({
 
 
   return (
-    <article className="pos px-x-axis relative h-[90vh] xl:h-[100vh]" > 
-      <article className="lg:w-3/5 leading-[70px]  px-[2%]">
+    <article className="px-x-axis flex flex-col   mt-20" > 
+      <article className="w-full leading-[70px]  px-[2%">
         <h6 className="uppercase text-[48px] lg:text-[96px] text-primary font-bold">Services</h6>
-        <p className="font-[600] text-base lg:text-xl text-primary lg:pr-[24%] leading-[26px] mt-4">
-          Ethiopian coffee experiences that delight the senses while promoting
-          sustainable farming practices and community engagement.
+        <p className="font-[600] text-base lg:text-[20px] text-primary lg:pr-[24%] leading-[26px] mt-4 w-full">
+        Quality Services at hand.
         </p>
       </article>
-
-      <ScrollItems showMenu={showMenu} showSideContent={showSideContent} />
+      <div className="overflow-hidden">
+         <ScrollItems showMenu={showMenu} showSideContent={showSideContent} />
+      </div>
+     
     </article>
   );
 };
 
 const ScrollItems = ({
-  showMenu,
+  showMenu, 
   showSideContent,
 }: {
   showMenu: boolean;
@@ -117,11 +118,10 @@ const ScrollItems = ({
   }, []);
 
   return (
-    <article className="w-full overflow-hidden">
-      <div id="cursorItem" className="hidden lg:customCursor" />
-
+    <article className="w-full">
+     
       <article
-        className={`scroll-tab-container overflow-hidden flex items-end  gap-10 w-[100vw] pb-6 ml-[4%] mt-10 py-8 pl-x-axis  pr-[12%] cursor-pointer ${showMenu ? "" : "z-[3000] "} `}
+        className={`scroll-tab-container overflow-hidden flex items-end  gap-10 w-[100vw] pb-6 ml-[4%]  py-8 pl-x-axis  pr-[12%] cursor-pointer ${showMenu ? "" : "z-[3000] "} `}
         ref={scrollRef}
         onMouseEnter={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -133,20 +133,20 @@ const ScrollItems = ({
         {ServiceScrollItemsSecondary.map((item) => (
           <section
             key={item.id}
-            className={`box-shadow relative px-12 transition-all duration-[400ms]  ${selectedCard === item.id ? "text-white bg-primary h-[50vh] lg:h-[60vh]" : "text-primary bg-white h-[46vh] lg:h-[58vh]"}  w-[340px] lg:w-full max-w-[450px] feed rounded-[30px] flex-shrink-0 flex flex-col `}
+            className={`flex flex-col   justify-between box-shadow relative px-10 md:px-12 transition-all duration-[400ms] mt-10 ${selectedCard === item.id ? "text-white bg-primary   " : "text-primary bg-white  "}  w-[300px] sm:w-[340px] lg:w-[360px] xl:w-[370px] max-w-[480px]  feed rounded-[30px] flex-shrink-0 flex flex-col `}
             onMouseOverCapture={() => setSelectedCard(item.id)}
           >
             <div className="flex justify-start items-center gap-8 mt-10  lg:mb-0 w-full">
               <img
                 src={selectedCard === item.id ? item.icon : item.iconmobile}
                 alt={item.id}
-                className="w-[40px] h-[40px] lg:w-[65px] lg:h-[75px] "
+                className="w-[40px]  "
               />
               <h6 className="text-[24px] lg:text-[32px] font-bold capitalize">{item.title}</h6>
             </div>
-            <p className=" font-[500] py-2 lg:py-10 text-xl mt-4 lg:text-2xl leading-[26.5px]">{item.text}</p>
+            <p className=" font-[500] py-2 lg:py-10 text-md mt-4 md:text-2xl ">{item.text}</p>
 
-            <div className="flex justify-center items-center w-full absolute left-0 bottom-10 lg:bottom-10">
+            <div className=" pb-5 justify-center items-center w-full">
               <CallToActionBtn
                 title="Order Now"
                 containerClass={"flex items-center justify-center gap-8"}
@@ -165,7 +165,7 @@ const ScrollItems = ({
       <div className="pl-[8%]">
       <Scrollprogress
         scrollProgress={scrollProgress}
-        containerClass="bg-[#d9d9d9] mt-8 lg:mt-16 "
+        containerClass="bg-[#d9d9d9] mb-10 lg:mb-20  "
         progressClass="bg-secondary"
       />
       </div>

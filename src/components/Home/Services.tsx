@@ -20,21 +20,6 @@ const Services = () => {
       }}
     >
     
-     
-
-     
-
-      <div className="absolute right-[3%] top-6">
-        <CallToActionBtn
-          title="OUR SERVICES"
-          containerClass={"flex items-center justify-center gap-12"}
-          titleClass={"font-bold text-[25px] md:text-[32px] text-primary pt-1"}
-          btnClass={
-            "bg-primary flex justify-center items-center rounded-2xl w-[72px] h-[70px] cursor-pointer hover:opacity-90"
-          }
-          onClick={() => navigate(ROUTES[2])}
-        />
-      </div>
 
       <section className="font-trap-Regular  text-white w-full lg:w-1/2 ml-[5%] lg:ml-[5%] mb-[5vh] md:mb-[15vh] lg:mt-[10vh] lg:mb-0 pr-[80px] lg:pr-0">
         <h2 className="font-[700] text-[40px] lg:text-[90px] leading-[52px] lg:leading-[6rem] uppercase ">
