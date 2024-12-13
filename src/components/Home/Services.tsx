@@ -36,7 +36,7 @@ const Services = () => {
         />
       </div>
 
-      <section className="font-trap-Regular  text-white w-full lg:w-1/2 ml-[15%] lg:ml-[16%] mb-[5vh] md:mb-[15vh] lg:mt-[10vh] lg:mb-0 pr-[80px] lg:pr-0">
+      <section className="font-trap-Regular  text-white w-full lg:w-1/2 ml-[5%] lg:ml-[5%] mb-[5vh] md:mb-[15vh] lg:mt-[10vh] lg:mb-0 pr-[80px] lg:pr-0">
         <h2 className="font-[700] text-[40px] lg:text-[90px] leading-[52px] lg:leading-[6rem] uppercase ">
           Service We Provide
         </h2>
