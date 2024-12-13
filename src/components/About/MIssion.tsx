@@ -5,7 +5,7 @@ import BG from "../../assets/services8.svg";
 const Mission = () => {
   return (
     <article
-      className="bg-secondary text-white pl-[5%] pt-[5vh] pb-[10vh] pr-[10%] lg:pr-[8%] h-[120vh] lg:h-[80vh] xl:h-[70vh]"
+      className="bg-secondary text-white pl-[5%] pt-[5vh] pb-[10vh] pr-[10%] lg:pr-[8%] "
       style={{
         width: "100%",
         backgroundRepeat: "no-repeat",
@@ -25,7 +25,7 @@ const Mission = () => {
             connections, and promoting sustainability from farm to cup.
           </p>
         </section>
-        <section className="lg:w-[42%] mt-12 ">
+        <section className="lg:w-[42%]  ">
           <h6 className="font-bold text-[48px] lg:text-[64px] uppercase">
             Vision
           </h6>

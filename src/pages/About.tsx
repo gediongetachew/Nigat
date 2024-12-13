@@ -12,7 +12,7 @@ const About = ({
 }) => {
   return (
     <article className="font-trap-Regular">
-      <div className="h-[100vh]" />
+    
 
       <Hero showMenu={showMenu} showSideContent={showSideContent} />
       <More />

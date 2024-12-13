@@ -16,7 +16,7 @@ const Hero = ({
 }) => {
   return (
     <article
-      className="pl-x-axis py-6 h-[100vh] w-full  "
+      className="pl-x-axis py-6 h-[120vh] w-full flex flex-col  justify-center "
       style={{
         
         top: 0,
@@ -24,16 +24,13 @@ const Hero = ({
         backgroundRepeat: "no-repeat",
         backgroundImage: `url(${BG})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "left",
+        
       }}
     >
-      <section className="w-full">
-        <Link to={ROUTES[0]}>
-          <img src={Logo} alt="logo" className="w-[203px] h-[65px]" />
-        </Link>
-      </section>
+    
 
-      <article className="lg:w-full text-[32px] lg:text-[64px] leading-[52px] lg:leading-[70px] font-bold mt-16  lg:mt-[12vh] px-[5%]">
+      <article className="lg:w-full text-[32px] lg:text-[64px] leading-[52px] lg:leading-[70px] font-bold pt-20  px-[5%]">
         <h6 className="text-primary">
           SAVOR <span className="lg:hidden">THE DELIGHT</span>
           <span className="pl-14 hidden lg:inline">THE DELIGHT OF</span>
@@ -49,7 +46,7 @@ const Hero = ({
         </p>
       </article>
 
-      <article>
+      <article className="">
         <ScrollItems showMenu={showMenu} showSideContent={showSideContent} />
       </article>
     </article>
@@ -142,20 +139,20 @@ const ScrollItems = ({
       <div id="cursorItem" className="hidden lg:customCursor" />
 
       <article
-        className={`scroll-tab-container overflow-hidden flex flex-row gap-6 w-full pb-6 lg:ml-[15%] absolute bottom-10 lg:bottom-20 py-8 pl-2 lg:pl-6 pr-[20%] cursor-pointer ${
+        className={`scroll-tab-container overflow-hidden flex flex-row gap-6 w-full pb-6 lg:ml-[15%] mt-10  bottom-10 lg:bottom-20 py-8 pl-2 lg:pl-6 pr-[20%] cursor-pointer ${
           showMenu ? "" : "z-[3000] "
         } `}
         ref={scrollRef}
         onMouseEnter={handleMouseDown}
         onMouseLeave={handleMouseLeave}
-        onMouseMove={handleMouseMove}
+        onMouseMove={handleMouseMove} 
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
       >
         {ServiceHeroScrollItems.map((item) => (
           <section
-            className=" text-white w-[340px] h-[27vh] lg:h-[35vh] lg:w-full feed max-w-[550px] pb-16 rounded-[20px] flex-shrink-0 p-6"
+            className=" text-white w-[340px] h-[27vh] lg:h-[45vh] lg:w-full feed max-w-[550px] pb-16 rounded-[20px] flex-shrink-0 p-6"
             key={item.id}
             style={{
               backgroundRepeat: "no-repeat",
@@ -169,7 +166,7 @@ const ScrollItems = ({
 
       <Scrollprogress
         scrollProgress={scrollProgress}
-        containerClass="bg-[#d9d9d9] absolute bottom-6 lg:bottom-2 lg:bottom-10 ml-3 lg:ml-[16%]"
+        containerClass="bg-[#d9d9d9]  bottom-6 lg:bottom-2 lg:bottom-10 ml-3 lg:ml-[16%]"
         progressClass="bg-secondary"
       />
     </article>

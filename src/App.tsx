@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,21 +10,27 @@ import Footer from "./components/Footer";
 import { ROUTES } from "./util/data";
 import { useState } from "react";
 import Logo from "./assets/Logo.svg";
+import Logo2 from "./assets/Logo2.svg"
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSideContent, setShowSideContent] = useState(false);
-
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <>
       <article className="absolute top-0 left-0 w-full bg-transparent  p-5 hidden lg:flex font-trap-Regular font-[700]">
         <section className="w-[40%]">
           <Link to={ROUTES[0]}>
-            <img
-              src={Logo}
-              alt="logo"
-              className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
-            />
+            {pathname === ROUTES[1] || pathname === ROUTES[2] || pathname === ROUTES[4] ? (
+              <img src={Logo2} alt="logo" className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]" />
+            ) : (
+              <img
+                src={Logo}
+                alt="logo"
+                className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
+              />
+            )}
           </Link>
         </section>
         <section className="w-[50%]">
