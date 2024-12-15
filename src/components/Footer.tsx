@@ -14,12 +14,12 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <article className="lg:h-[60vh] w-full bg-primary flex flex-col lg:flex-row relative font-trap-Regular font-[700]">
+    <article className=" w-full bg-primary flex flex-col lg:flex-row relative font-trap-Regular font-[700] z-[1000]">
       <section className="w-full h-full flex flex-col gap-y-[4%]">
-        <div className="h-[70%] pb-10 lg:pb-0 border-b mx-[5%] md:mt-2">
+        <div className=" pb-10 lg:pb-0 border-b mx-[5%] md:mt-2">
           <FooterMain />
         </div>
-        <div className="mt-20 lg:mt-4 lg:h-[25%] relative flex justify-between items-end opacity-30 text-white ml-[5%] pb-2">
+        <div className="mt-20  relative flex justify-between items-end opacity-30 text-white ml-[5%] pb-2">
           <h6 className="text-[60px] lg:text-[80px] xl:text-[96px] font-bold leading-[4rem]">
             NIGAT KAFFEE{" "}
             <span className="text-[32px] lg:text-[46px] lg:ml-5 hidden lg:inline">
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
       </section>
       <section
-        className={`w-full lg:w-[104px] bg-white flex flex-row lg:flex-col justify-start lg:justify-end gap-y-[5%] lg:py-[3%] pr-6 pl-2 h-full pb-6 pt-2 lg:pb-6 lg:pt-2  z-[300]`}
+        className={`w-full lg:w-[80px] xl:w-[100px] bg-white flex flex-row lg:flex-col justify-start lg:justify-end gap-y-[5%] lg:py-[3%] pr-6 pl-2  pb-6 pt-2 lg:pb-6 lg:pt-2  z-[300]`}
       >
         <ul className="flex lg:flex-col items-end w-full gap-y-3 gap-x-2">
           <li className="text-[96px] text-secondary-light hover:text-secondary cursor-pointer">
@@ -95,7 +95,7 @@ const Footer = () => {
 
 export const FooterMain = () => {
   return (
-    <article className="grid grid-cols-1 lg:grid-cols-4 items-center pt-[8vh]">
+    <article className="grid grid-cols-1 lg:grid-cols-4 items-center ">
       <div className="w-full flex flex-col justify-start gap-4 lg:pr-[30%]">
         <GrLocation className="w-12  h-12 text-secondary opacity-70" />
         <h6 className="text-2xl sm:text-5xl lg:text-2xl font-bold text-secondary uppercase">Address</h6>

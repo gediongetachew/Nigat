@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Link, Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,29 +11,55 @@ import { ROUTES } from "./util/data";
 import { useState } from "react";
 import Logo from "./assets/Logo.svg";
 import Logo2 from "./assets/Logo2.svg"
+import Menu0ne from "./assets/menuWhite.svg";
+import MenuTwo from "./assets/menuPrimary.svg";
+import LogoSmall from "./assets/LogoSmall.svg";
+import CallToActionBtn from "./components/callToActionBtn";
+
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [showSideContent, setShowSideContent] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { pathname } = location;
+  const addborder = pathname !== ROUTES[3];
+  const handleMenuClick = () => {
+    setShowMenu((prev) => {
+      console.log(prev);
+      if (
+        pathname !== ROUTES[0] &&
+        pathname !== ROUTES[3] &&
+        pathname !== ROUTES[4]
+      ) {
+        if (!prev) {
+          setShowSideContent(true);
+        } else {
+          setShowSideContent(false);
+        }
+      }
+
+      return !prev;
+    });
+  };
   return (
-    <>
-      <article className="absolute top-0 left-0 w-full bg-transparent  p-5 hidden lg:flex font-trap-Regular font-[700]">
-        <section className="w-[40%]">
+    <article>
+      <article className="absolute top-0 left-0 w-full bg-transparent items-center  p-5  font-trap-Regular font-[700] hidden lg:flex">
+  
+        <section className="w-[20%] lg:w-[40%]">
           <Link to={ROUTES[0]}>
             {pathname === ROUTES[1] || pathname === ROUTES[2] || pathname === ROUTES[4] ? (
-              <img src={Logo2} alt="logo" className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]" />
+              <img src={Logo2} alt="logo" className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px] " />
             ) : (
               <img
                 src={Logo}
                 alt="logo"
-                className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
+                className="w-[81px] lg:w-[203px] h-[450px] lg:h-[65px]"
               />
             )}
           </Link>
         </section>
-        <section className="w-[50%]">
+        <section className="w-[80%] lg:w-[50%] ">
         <ul className="pt-[2vh] w-full h-full   flex  items-center justify-between  pl-[5%] text-left uppercase leading-[42px]">
             <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[0]} >
@@ -65,10 +91,11 @@ function App() {
             
           </ul>
         </section>
+ 
       </article>
-      <article
-        className="absolute top-0 right-0"
-        style={{ zIndex: 500, width: showMenu ? "1500vw" : "10vw" }}
+       <article
+        className="full-height-article absolute top-0 right-0 h-full flex"
+        
       >
         <Header
           showMenu={showMenu}
@@ -76,24 +103,24 @@ function App() {
           showSideContent={showSideContent}
           setShowSideContent={setShowSideContent}
         />
-      </article>
+      </article> 
       <Routes>
         <Route
           path={ROUTES[0]}
           element={
-            <Home showMenu={showMenu} showSideContent={showSideContent} />
+            <Home  />
           }
         />
         <Route
           path={ROUTES[1]}
           element={
-            <About showMenu={showMenu} showSideContent={showSideContent} />
+            <About  />
           }
         />
         <Route
           path={ROUTES[2]}
           element={
-            <Services showMenu={showMenu} showSideContent={showSideContent} />
+            <Services  />
           }
         />
         <Route path={ROUTES[3]} element={<ContactUs />} />
@@ -101,7 +128,7 @@ function App() {
         <Route path="*" element={<Navigate to={ROUTES[0]} />} />
       </Routes>
       <Footer />
-    </>
+    </article>
   );
 }
 

@@ -15,13 +15,7 @@ import Services from "../components/Home/Services";
 import Order from "../components/Home/Order";
 import { ROUTES } from "../util/data";
 
-const Home = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const Home = () => {
   const navigate = useNavigate();
 
   return (

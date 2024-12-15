@@ -8,13 +8,7 @@ import Scrollprogress from "../scrollprogress";
 
 
 
-const ServicesComp = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const ServicesComp = () => {
 
 
   return (
@@ -26,20 +20,14 @@ const ServicesComp = ({
         </p>
       </article>
       <div className="overflow-hidden">
-         <ScrollItems showMenu={showMenu} showSideContent={showSideContent} />
+         <ScrollItems  />
       </div>
      
     </article>
   );
 };
 
-const ScrollItems = ({
-  showMenu, 
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const ScrollItems = () => {
 
   const navigate = useNavigate();
 
@@ -121,7 +109,7 @@ const ScrollItems = ({
     <article className="w-full">
      
       <article
-        className={`scroll-tab-container overflow-hidden flex items-end  gap-10 w-[100vw] pb-6 ml-[4%]  py-8 pl-x-axis  pr-[12%] cursor-pointer ${showMenu ? "" : "z-[3000] "} `}
+        className={`scroll-tab-container overflow-hidden flex items-end  gap-10 w-[100vw] pb-6 ml-[4%]  py-8 pl-x-axis  pr-[12%] cursor-pointer ${ "z-[3000] "} `}
         ref={scrollRef}
         onMouseEnter={handleMouseDown}
         onMouseLeave={handleMouseLeave}

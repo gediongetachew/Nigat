@@ -33,7 +33,7 @@ const Header = ({
 
   return (
     <article
-      className={`font-trap-Regular px-x-axis py-6 h-[10vh]  max-h-[116px] absolute right-0`}
+      className={`font-trap-Regular px-x-axis py-6 h-full  absolute right-0`}
     >
     
      

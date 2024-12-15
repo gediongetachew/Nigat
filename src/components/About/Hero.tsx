@@ -7,13 +7,7 @@ import { ROUTES, ServiceHeroScrollItems } from "../../util/data";
 import { Link } from "react-router-dom";
 import Scrollprogress from "../scrollprogress";
 
-const Hero = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const Hero = () => {
   return (
     <article
       className="pl-x-axis py-6 h-[120vh] w-full flex flex-col  justify-center "
@@ -47,19 +41,13 @@ const Hero = ({
       </article>
 
       <article className="">
-        <ScrollItems showMenu={showMenu} showSideContent={showSideContent} />
+        <ScrollItems  />
       </article>
     </article>
   );
 };
 
-const ScrollItems = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const ScrollItems = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -140,7 +128,7 @@ const ScrollItems = ({
 
       <article
         className={`scroll-tab-container overflow-hidden flex flex-row gap-6 w-full pb-6 lg:ml-[15%] mt-10  bottom-10 lg:bottom-20 py-8 pl-2 lg:pl-6 pr-[20%] cursor-pointer ${
-          showMenu ? "" : "z-[3000] "
+         "z-[3000] "
         } `}
         ref={scrollRef}
         onMouseEnter={handleMouseDown}

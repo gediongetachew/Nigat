@@ -29,30 +29,21 @@ const ContactSchema = Yup.object().shape({
 const Order = () => {
   return (
     <main className=" bg-secondary font-trap-Regular">
-      <div className="min-h-[140vh] lg:h-[128vh] lg:min-h-[85vh]" />
+      <div className="" />
 
-      <section className="w-full py-6 px-x-axis bg-white absolute top-0 lg:relative lg:hidden z-[500]">
-          <Link to={ROUTES[0]}>
-            <img src={Logo} alt="logo" className="w-[203px] h-[65px]" />
-          </Link>
-        </section>
-
+     
 
 
       <article
-        className="px-x-axis text-white pb-10 bg-secondary z-[400] lg:z-0  min-h-[120vh] lg:h-[90vh] lg:min-h-[90vh]"
+        className="px-x-axis text-white pb-10 bg-secondary z-[400] lg:z-0  mt-20 lg:mt-28 "
         style={{
-          position: "absolute",
+          
           top: 0,
           left: 0,
           width: "100%",
         }}
       >
-        <section className="w-full py-6 bg-white absolute top-0 left-0 px-x-axis  hidden lg:block">
-          <Link to={ROUTES[0]}>
-            <img src={Logo} alt="logo" className="w-[203px] h-[65px]" />
-          </Link>
-        </section>
+       
 
         <article className="px-[5%] lg:mr-[150px] pt-[100px] lg:pt-28">
         <section className=" text-[48px] lg:text-[96px] uppercase leading-[52px] lg:leading-[105px] mt-[6vh] w-full lg:w-1/2 px-[1%] my-10">

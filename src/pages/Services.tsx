@@ -3,18 +3,12 @@ import Hero from "../components/service/Hero";
 import More from "../components/service/More";
 import ServicesComp from "../components/service/Services";
 
-const Services = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const Services = () => {
   return (
     <article className=" font-trap-Regular">
      
-      <Hero showMenu={showMenu} showSideContent={showSideContent} />
-      <ServicesComp showMenu={showMenu} showSideContent={showSideContent} />
+      <Hero />
+      <ServicesComp />
       <More />
       <Order />
     </article>

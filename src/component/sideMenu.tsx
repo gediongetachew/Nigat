@@ -1,84 +1,16 @@
-import Menu0ne from "../assets/menu.svg";
-import MenuTwo from "../assets/menu-2.svg";
 import LogoSmall from "../assets/LogoSmall.svg";
-
 import FB from "../assets/icons/facebook.svg";
 import Twitter from "../assets/icons/x.svg";
 import IG from "../assets/icons/instagram.svg";
 import WA from "../assets/icons/whatsapp.svg";
 import LINKDIN from "../assets/icons/linkedin.svg";
-
+import Menu0ne from "../assets/menu.svg";
+import MenuTwo from "../assets/menu-2.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { ROUTES } from "../util/data";
-import CallToActionBtn from "./callToActionBtn";
+import CallToActionBtn from "../components/callToActionBtn";
 
-const Menu = ({
-  showMenu,
-  setShowMenu,
-  showSideContent,
-  setShowSideContent,
-}: {
-  showMenu: boolean;
-  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
-  showSideContent: boolean;
-  setShowSideContent: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
-  const location = useLocation();
-  const { pathname } = location;
-
-  const addborder = pathname !== ROUTES[3];
-
-  const handleMenuClick = () => {
-    setShowMenu((prev) => {
-      console.log(prev);
-      if (
-        pathname !== ROUTES[0] &&
-        pathname !== ROUTES[3] &&
-        pathname !== ROUTES[4]
-      ) {
-        if (!prev) {
-          setShowSideContent(true);
-        } else {
-          setShowSideContent(false);
-        }
-      }
-
-      return !prev;
-    });
-  };
-
-  return (
-    <article className="h-[100vh]">
-      <button
-        type="button"
-        className={`w-[60px] lg:w-[80px] xl:w-[100px] bg-white flex justify-center items-center absolute   top-0 right-0 h-[10vh] lg:h-[14vh] border-l-8 ${
-          addborder ? " border-secondary" : "border-white"
-        }`}
-        style={{
-          zIndex: 300,
-        }}
-        onClick={handleMenuClick} 
-      >
-        <img
-          src={showMenu ? MenuTwo : Menu0ne}
-          alt="menu"
-          className={
-            showMenu ? "" : "w-[46px] lg:w-[70px] h-[26px] lg:h-[35px]"
-          }
-        />
-      </button>
-      
-
-      <SideMenu
-        showMenu={showMenu}
-        setShowMenu={setShowMenu}
-        showSideContent={showSideContent}
-        setShowSideContent={setShowSideContent}
-      />
-    </article>
-  );
-};
 
 const SideMenu = ({
   showMenu,
@@ -93,6 +25,8 @@ const SideMenu = ({
 }) => {
   const location = useLocation();
   const { pathname } = location;
+
+  const addborder = pathname !== ROUTES[3];
 
   const navigate = useNavigate();
 
@@ -117,42 +51,60 @@ const SideMenu = ({
   return (
     <article
       className={`absolute   ${
-         pathname === ROUTES[0]
+        pathname === ROUTES[0]
           ? "h-[125vh] sm:h-screen lg:h-[100vh] "
-          : "h-screen lg:h-[180vh]"
-      } ${pathname=== ROUTES[4] ? "lg:h-[200vh]": ""}  top-0 right-0      flex justify-end z-[200]`} 
+          : "h-screen lg:h-[150vh]"
+      }   top-0 right-0  flex justify-end z-[200]`}
     >
+      <button
+        type="button"
+        className={`w-[80px] lg:w-[100px] bg-white flex justify-center items-center absolute   top-0 right-0 h-[10vh] border-l-8 ${
+          addborder ? " border-secondary" : "border-white"
+        }`}
+        style={{
+          zIndex: 300,
+        }}
+        onClick={handleMenuClick}
+      >
+        <img
+          src={showMenu ? MenuTwo : Menu0ne}
+          alt="menu"
+          className={
+            showMenu ? "" : "w-[46px] lg:w-[70px] h-[26px] lg:h-[35px]"
+          }
+        />
+      </button> 
       {showMenu && (
-        <div className="w-[100vw] bg-primary h-[100vh] absolute z-400   ">
-          <ul className="w-full h-full bg-gradient-to-r from-primary to-[#004F56C2] opacity-100  flex flex-col items-left lg:items-left text-left justify-start pt-20  gap-y-0 lg:gap-y-16 pl-[10%] lg:pl-[35%]  uppercase leading-[2.5]  lg:leading-[1]">
-            <li className="text-[35px] sm:text-[42px] md:text-[48px] xl:text-[55px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+        <div className="w-full bg-primary   ">
+          <ul className="pt-[12vh] w-full h-full bg-gradient-to-r from-primary to-[#004F56C2] opacity-100  flex flex-col items-start justify-start gap-y-0 lg:gap-y-16 pl-[10%] text-left uppercase leading-[42px]">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[0]} onClick={handleMenuClick}>
                 Home
               </Link>
             </li>
-            <li className="text-[35px] sm:text-[42px] md:text-[48px] xl:text-[55px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[1]} onClick={handleMenuClick}>
                 Who we are
               </Link>
             </li>
-            <li className="text-[35px] sm:text-[42px] md:text-[48px] xl:text-[55px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[2]} onClick={handleMenuClick}>
                 Services
               </Link>
             </li>
-            <li className="text-[35px] sm:text-[42px] md:text-[48px] xl:text-[55px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[3]} onClick={handleMenuClick}>
                 COntact us
               </Link>
             </li>
-            <li className="text-[35px] sm:text-[42px] md:text-[48px] xl:text-[55px] flex gap-5 items-center text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[22px] xl:text-[64px] flex justify-between items-center text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[4]} onClick={handleMenuClick}>
                 Order Now
               </Link>
               <CallToActionBtn
                 title=""
                 containerClass={"flex items-center justify-center gap-12"}
-                titleClass={"font-bold text-[35px] sm:text-[42px] md:text-[48px] text-secondary pt-1"}
+                titleClass={"font-bold text-[22px] text-secondary pt-1"}
                 btnClass={
                   "bg-secondary flex justify-center items-center rounded-lg lg:rounded-2xl w-[41px] h-[40px] lg:w-[72px] lg:h-[70px] cursor-pointer hover:opacity-90"
                 }
@@ -178,8 +130,8 @@ const SideMenu = ({
       )}
       {showSideContent && (
         <section
-          className={` ${ pathname === ROUTES[3] || pathname === ROUTES[4] ? "hidden lg:flex" : "flex"} ${
-            showMenu ? "w-[80px] lg:w-[80px]" : "w-[80px] sm:w-[60px] lg:w-[80px] xl:w-[100px]"
+          className={`${
+            showMenu ? "w-[80px] lg:w-[100px]" : "w-[80px] lg:w-[100px]"
           } bg-white flex flex-col items-center justify-center sm:justify-end gap-y-[5%] pb-[7%] pr-3 lg:pr-8 pl-2`}
         >
           {pathname !== ROUTES[3] && pathname !== ROUTES[4] && (
@@ -226,10 +178,11 @@ const SideMenu = ({
             </>
           )}
         </section>
-      )} 
+      )}
     </article>
   );
 };
+
 
 export const LanguageBtns = () => {
   return (
@@ -268,5 +221,4 @@ export const Address = () => {
     </section>
   );
 };
-
-export default Menu;
+export default SideMenu

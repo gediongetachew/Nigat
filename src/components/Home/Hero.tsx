@@ -69,7 +69,8 @@ const Hero = () => {
 
   return (
     <>
-      <article
+    
+    <article
         ref={ref}
         className="px-x-axis pr-[80px]  py-6 bg-primary justify-center  lg:hidden h-[100vph "
       
@@ -127,7 +128,7 @@ const Hero = () => {
 
       <article
         ref={ref}
-        className="px-x-axis pr-[0px] py-6 bg-primary justify-center h-screen hidden lg:flex overflow-hidden"
+        className="px-x-axis pr-[0px] py-6 bg-primary justify-center h-screen hidden lg:flex overflow-hidden w-full"
         style={{
           top: 0,
           left: 0,
@@ -139,18 +140,8 @@ const Hero = () => {
           zIndex: -1,
         }}
       >
-        <div className="w-full h-full flex ">
-            {/* <section className="w-full">
-              <Link to={ROUTES[0]}>
-                <img
-                  src={Logo}
-                  alt="logo"
-                  className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px]"
-                />
-              </Link>
-            </section> */}
-
-          <section className="px-[2%] justify-start w-full h-[50dvp] lg:h-[20%] flex flex-col mt-[15vh] lg:mt-[20vh] uppercase text-[32px] lg:text-[64px] text-white font-trap-Regular leading-[52px] lg:leading-[5rem]">
+        <div className="w-full h-full flex flex-col">
+          <section className="flex-1 h-[50dvp] lg:h-[20%] flex flex-col mt-[15vh] lg:mt-[20vh] uppercase text-[32px] lg:text-[64px] text-white font-trap-Regular leading-[52px] lg:leading-[5rem]">
             <p className="font-[700]">
               SAVOR THE DELIGHT<span className="lg:hidden"> OF</span>{" "}
             </p>
@@ -167,8 +158,8 @@ const Hero = () => {
             </p>
           </section>
 
-          <section className="font-trap-Regular px-[2%] grid grid-cols-3 gap-10 justify-end items-end text-white absolute bottom-6 pr-[120px] lg:pr-[15%]  w-full">
-            <div className="border rounded-3xl px-8 py-4 justify-start items-start col-span-3 lg:col-span-1 gap-4 hidden lg:flex">
+          <section className="font-trap-Regular  gap-10 justify-start items-end text-white flex pr-52 w-full">
+            <div className="border rounded-3xl px-8 py-4 justify-start items-start lg:col-span-1 gap-4 hidden lg:flex w-full">
               <img
                 src={HOMEONE}
                 alt="logo"
@@ -185,7 +176,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="border rounded-3xl px-4 lg:px-8 py-4 flex justify-start items-start col-span-3 lg:col-span-1 gap-4 bg-primary ">
+            <div className="border rounded-3xl px-4 lg:px-8 py-4 flex justify-start items-start col-span-3 lg:col-span-1 gap-4 bg-primary w-full">
               <img
                 src={HOMETWO}
                 alt="logo"
@@ -198,7 +189,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="border rounded-3xl px-4 lg:px-8 py-4 flex justify-start items-start col-span-3 lg:col-span-1 gap-4 bg-primary ">
+            <div className="border rounded-3xl px-4 lg:px-8 py-4 flex justify-start items-start col-span-3 lg:col-span-1 gap-4 bg-primary w-full">
               <img
                 src={HOMETHREE}
                 alt="logo"

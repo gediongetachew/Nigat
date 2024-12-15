@@ -25,42 +25,35 @@ const ContactSchema = Yup.object().shape({
 
 const ContactUs = () => {
   return (
-    <main className="font-trap-Regular">
-      <div className="h-[130vh] lg:h-[105vh] bg-primary"  />
+  
+      
       
       <article
-        className="px-x-axis py-6 bg-primary text-white pb-10 z-[400] lg:z-0 h-screen lg:h[90vh]"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-        }}
+        className="flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10 z-[200] lg:z-0  "
+        
       >
          <div
-    className="block md:hidden absolute top-0 left-0 w-full h-full"
+    className="block md:hidden  "
     style={{
       backgroundRepeat: "no-repeat",
       backgroundImage: `url(${BG})`, // Use the background image for small screens
       backgroundSize: "cover",
       backgroundPosition: "down",
-   
-      height:'110vh',
+      position:'absolute',
+      
       zIndex: -1
     }}
   />
-        <section className="w-full py-6">
-          <Link to={ROUTES[0]}>
-            <img src={Logo} alt="logo" className="w-[203px] h-[65px]" />
-          </Link>
-        </section>
+        
 
-        <section className="lg:mr-[170px]">
-          <section className="w-[50%] text-nowrap font-bold text-[48px] lg:text-[80px] xl:text-[96px] uppercase leading-[52px] lg:leading-[105px] mt-[6vh] lg:w-1/2 px-[2%] my-10">
+        <section className="lg:mr-[170px] align-middle mt-32">
+          <section className="justify-center w-[50%] text-nowrap font-bold text-[40px] sm:text-[48px] lg:text-[80px] xl:text-[96px] uppercase  mt-[6vh] lg:w-1/2 px-[2%] my-10">
+            <div className="leading-[50px] lg:leading-[105px]">
             <p>Get In touch</p>
             <p> With Us !</p>
+            </div>
 
-            <p className="font-[400] text-base xl:text-[24px] normal-case mt-4  px-2 text-wrap w-96 sm:w-full ">
+            <p className="font-[400] text-[15px] xl:text-[24px] normal-case mt-4  px-2 text-wrap w-96  sm:w-full leading-[20px] lg:leading-[40px] ">
               Ethiopian coffee experiences that delight the senses while
               promoting sustainable farming practices and community engagement.
             </p>
@@ -79,7 +72,7 @@ const ContactUs = () => {
             {() => (
               <Form>
                 <section
-                  className={`flex flex-col lg:grid grid-col-1 lg:grid-cols-3 gap-x-10 gap-y-10 w-full mt-20 px-[2%] `}
+                  className={`flex flex-col lg:grid grid-col-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10 w-full mt-20 px-[2%] `}
                 >
                   <div className="w-full">
                     <Field
@@ -162,7 +155,7 @@ const ContactUs = () => {
           </Formik>
         </section>
       </article>
-    </main>
+  
   );
 };
 

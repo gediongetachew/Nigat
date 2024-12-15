@@ -3,18 +3,12 @@ import Mission from "../components/About/MIssion";
 import More from "../components/About/More";
 import Order from "../components/Home/Order";
 
-const About = ({
-  showMenu,
-  showSideContent,
-}: {
-  showMenu: boolean;
-  showSideContent: boolean;
-}) => {
+const About = () => {
   return (
     <article className="font-trap-Regular">
     
 
-      <Hero showMenu={showMenu} showSideContent={showSideContent} />
+      <Hero />
       <More />
       <Mission />
 
