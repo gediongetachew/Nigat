@@ -10,7 +10,7 @@ import Scrollprogress from "../scrollprogress";
 const Hero = () => {
   return (
     <article
-      className="pl-x-axis py-6 h-[120vh] w-full flex flex-col  justify-center "
+      className="pl-x-axis py-6 h-[120vh] w-full flex flex-col justify-start lg:justify-center  "
       style={{
         
         top: 0,
@@ -22,9 +22,18 @@ const Hero = () => {
         
       }}
     >
+            <section className="w-full flex lg:hidden">
+            <Link to={ROUTES[0]}>
+              <img
+                src={Logo}
+                alt="logo"
+                className="w-[100px] lg:w-[203px] h-[50px] lg:h-[65px]"
+              />
+            </Link>
+          </section>
     
 
-      <article className="lg:w-full text-[32px] lg:text-[64px] leading-[52px] lg:leading-[70px] font-bold pt-20  px-[5%]">
+      <article className="lg:w-full text-[32px] lg:text-[64px] leading-[52px] lg:leading-[70px] font-bold pt-10  px-[5%]">
         <h6 className="text-primary">
           SAVOR <span className="lg:hidden">THE DELIGHT</span>
           <span className="pl-14 hidden lg:inline">THE DELIGHT OF</span>

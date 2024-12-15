@@ -44,9 +44,9 @@ function App() {
   };
   return (
     <article>
-      <article className="absolute top-0 left-0 w-full bg-transparent items-center  p-5  font-trap-Regular font-[700] hidden lg:flex">
+      <article className="absolute top-0 left-0 w-full bg-transparent items-center  p-5  font-trap-Regular font-[700]">
   
-        <section className="w-[20%] lg:w-[40%]">
+        <section className={`w-[20%] lg:w-[40%] ${(pathname === ROUTES[2] || pathname === ROUTES[4] )? "flex" : "hidden" }  lg:flex`}>
           <Link to={ROUTES[0]}>
             {pathname === ROUTES[1] || pathname === ROUTES[2] || pathname === ROUTES[4] ? (
               <img src={Logo2} alt="logo" className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px] " />
@@ -59,7 +59,7 @@ function App() {
             )}
           </Link>
         </section>
-        <section className="w-[80%] lg:w-[50%] ">
+        <section className="w-[80%] lg:w-[50%]  hidden lg:flex ">
         <ul className="pt-[2vh] w-full h-full   flex  items-center justify-between  pl-[5%] text-left uppercase leading-[42px]">
             <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
               <Link to={ROUTES[0]} >

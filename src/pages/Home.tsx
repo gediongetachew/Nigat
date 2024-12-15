@@ -118,7 +118,7 @@ const Home = () => {
           </section>
         <section className="font-trap-Regular font-[600] w-full flex md: px-[9%] items-end justify-start sm:justify-between absolute bottom-4 lg:bottom-10 left-[8px] lg:right-[60px] lg:relative md:pt-5">
          
-        <p className="text-white w-[45%] md:w-[50%] mt-12 font-bold text-[12px] sm:text-[18px] md:text-lg lg:text-[15px] ">
+        <p className="text-white w-[45%] md:w-[50%] mt-12 font-bold text-[10px] sm:text-[8px]  lg:text-[15px] ">
             Ethiopian coffee experiences that delight the senses while promoting
             sustainable farming practices and community engagement. To be the
             leading coffee brand in Germany, celebrated for our unique Ethiopian

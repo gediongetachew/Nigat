@@ -22,13 +22,13 @@ const Footer = () => {
         <div className="mt-20  relative flex justify-between items-end opacity-30 text-white ml-[5%] pb-2">
           <h6 className="text-[60px] lg:text-[80px] xl:text-[96px] font-bold leading-[4rem]">
             NIGAT KAFFEE{" "}
-            <span className="text-[32px] lg:text-[46px] lg:ml-5 hidden lg:inline">
+            <span className="text-[32px] lg:text-[46px] lg:ml-5 hidden lg:inline ">
               GET IN TOUCH
             </span>
           </h6>
           <button
             className={
-              "bg-white mr-8  opacity-90 hover:opacity-95  justify-center items-center rounded-2xl w-[72px] h-[70px] mb-2 cursor-pointer hover:opacity-9 hidden lg:flex"
+              "bg-white mr-8  opacity-90 hover:opacity-95  justify-center items-center rounded-2xl w-[70px] sm:w-[65px] h-[55px] sm:h-[70px] mb-2 cursor-pointer hover:opacity-9 hidden lg:flex"
             }
             onClick={() => {
               window.scroll(0, 0);
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-8 items-center lg:mt-0 lg:h-[25%] relative opacity-30 text-white ml-[5%] pb-20 uppercase font-bold  lg:hidden ">
-          <h6 className="text-[32px] lg:text-[46px] lg:ml-5">GET IN TOUCh</h6>
+          <h6 className="text-[32px] lg:text-[46px] lg:ml-5 text-nowrap">GET IN TOUCh</h6>
           <button
             className={
               "bg-white mr-8  opacity-90 hover:opacity-95 flex justify-center items-center rounded-2xl w-[72px] h-[70px] mb-2 cursor-pointer hover:opacity-9"

@@ -179,7 +179,7 @@ const SideMenu = ({
       {showSideContent && (
         <section
           className={` ${ pathname === ROUTES[3] || pathname === ROUTES[4] ? "hidden lg:flex" : "flex"} ${
-            showMenu ? "w-[80px] lg:w-[80px]" : "w-[80px] sm:w-[60px] lg:w-[80px] xl:w-[100px]"
+            showMenu ? "w-[80px] lg:w-[80px]" : "w-[60px] sm:w-[60px] lg:w-[80px] xl:w-[100px]"
           } bg-white flex flex-col items-center justify-center sm:justify-end gap-y-[5%] pb-[7%] pr-3 lg:pr-8 pl-2`}
         >
           {pathname !== ROUTES[3] && pathname !== ROUTES[4] && (
@@ -233,7 +233,7 @@ const SideMenu = ({
 
 export const LanguageBtns = () => {
   return (
-    <section className="upperclass flex justify-end w-[100px] gap-2 font-bold text-xs lg:text-lg">
+    <section className="upperclass flex justify-end w-[60px] lg:w-[80px] gap-2 font-bold text-xs lg:text-lg">
       <button
         type="button"
         className={`text-secondary border-b-4 border-secondary`}

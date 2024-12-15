@@ -10,7 +10,7 @@ import Scrollprogress from "../scrollprogress";
 const Hero = () => {
   return (
     <article
-      className="h-[100vh] sm:h-[100vh]  w-full overflow-hidden mt-[12vh]"
+      className="h-[100vh] sm:h-[100vh]  w-full overflow-hidden mt-[10vh] lg:mt-[14vh]"
       style={{
 
         top: 0,
@@ -21,7 +21,8 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-     
+    
+    
       <article className=" text-[40px] lg:text-[64px] lg:leading-[70px]  mt-16 lg:mt-[15vh] px-[5%]">
         <h6 className="font-bold uppercase text-white text-[32px] sm:text-[40px] lg:text-[64px] ">
           Service We Provide

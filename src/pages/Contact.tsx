@@ -29,21 +29,32 @@ const ContactUs = () => {
       
       
       <article
-        className="flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10 z-[200] lg:z-0  "
+        className="relative flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10 z-[200] lg:z-0  "
         
       >
-         <div
+              <section className="w-full">
+            <Link to={ROUTES[0]}>
+              <img
+                src={Logo}
+                alt="logo"
+                className="w-[81px] lg:w-[203px] h-[40px] lg:h-[65px]"
+              />
+            </Link>
+          </section>
+         {/* <div
     className="block md:hidden  "
     style={{
       backgroundRepeat: "no-repeat",
       backgroundImage: `url(${BG})`, // Use the background image for small screens
       backgroundSize: "cover",
-      backgroundPosition: "down",
+      backgroundPosition: "center",
       position:'absolute',
+      top:0,
+      left:0,
       
-      zIndex: -1
+      zIndex: 1
     }}
-  />
+  /> */}
         
 
         <section className="lg:mr-[170px] align-middle mt-32">
