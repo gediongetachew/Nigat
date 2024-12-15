@@ -112,7 +112,7 @@ export const FooterMain = () => {
           <img
             src={Logo}
             alt="logo"
-            className="w-[180px] h-[138px] lg:w-[207px] lg:h-[162px]"
+            className="w-[180px] h-[138px] sm:w-[150px] sm:h-[120px] lg:w-[207px] lg:h-[162px]"
           />
         </Link>
       </div>
@@ -144,7 +144,7 @@ export const Copyright = () => {
 
 export const Links = () => {
   return (
-    <ul className="flex flex-col gap-y-3 text-secondary hover:text-secondary lg:pl-[30%] pr-[20%]">
+    <ul className="flex flex-col gap-y-3 text-secondary hover:text-secondary   pr-[30%] lg:pl-[0%] lg:pr-[10%] xl:pl-[10%] xl:pr-[20%]">
       <h6 className="font-bold text-3xl md:text-2xl uppercase">Links</h6>
       <li
         onClick={() => window.scroll(0, 0)}
@@ -157,7 +157,7 @@ export const Links = () => {
           <p className="text-white text-xl md:text-[16px]">About us</p>
           <button
             className={
-              "bg-white mr-8  opacity-50 hover:opacity-95 flex justify-center items-center rounded-lg w-[34px] h-[34px]"
+              "bg-white mr-8  opacity-50 hover:opacity-95 hidden lg:flex justify-center items-center rounded-lg w-[34px] h-[34px]"
             }
           >
             <img src={arrow} alt="arrow" className="" />
@@ -175,7 +175,7 @@ export const Links = () => {
           <p className="text-white text-xl md:text-[16px]">Services</p>
           <button
             className={
-              "bg-white mr-8  opacity-50 hover:opacity-95 flex justify-center items-center rounded-lg w-[34px] h-[34px]"
+              "bg-white mr-8  opacity-50 hover:opacity-95 hidden lg:flex justify-center items-center rounded-lg w-[34px] h-[34px]"
             }
           >
             <img src={arrow} alt="arrow" className="" />
@@ -193,7 +193,7 @@ export const Links = () => {
           <p className="text-white text-xl md:text-[16px]">Order Now</p>
           <button
             className={
-              "bg-white mr-8  opacity-50 hover:opacity-95 flex justify-center items-center rounded-lg w-[34px] h-[34px]"
+              "bg-white mr-8  opacity-50 hover:opacity-95 hidden lg:flex justify-center items-center rounded-lg w-[34px] h-[34px]"
             }
           >
             <img src={arrow} alt="arrow" className="" />
@@ -211,7 +211,7 @@ export const Links = () => {
           <p className="text-white text-xl md:text-[16px]">Contact us</p>
           <button
             className={
-              "bg-white mr-8  opacity-50 hover:opacity-95 flex justify-center items-center rounded-lg w-[34px] h-[34px]"
+              "bg-white mr-8  opacity-50 hover:opacity-95 hidden lg:flex justify-center items-center rounded-lg w-[34px] h-[34px]"
             }
           >
             <img src={arrow} alt="arrow" className="" />
