@@ -204,7 +204,7 @@ const Hero = () => {
           </section>
         </div>
 
-       {imagesLoaded && <section className={"absolute right-[92.4px] z-[1000] w-2 h-[705px]  "}>
+       {imagesLoaded && <section className={"absolute right-[72px] xl:right-[92.4px] z-[1000] w-2 h-[705px]  "}>
           <div
             className={"bg-secondary"}
             style={{

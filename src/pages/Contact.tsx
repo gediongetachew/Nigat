@@ -29,7 +29,7 @@ const ContactUs = () => {
       
       
       <article
-        className="relative flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10 z-[200] lg:z-0  "
+        className="relative flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10  lg:z-0  "
         
       >
               <section className="w-full">
