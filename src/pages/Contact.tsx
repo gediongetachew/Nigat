@@ -29,10 +29,10 @@ const ContactUs = () => {
       
       
       <article
-        className="relative flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10  lg:z-0  "
+        className="relative flex flex-col font-trap-Regular px-x-axis py-6 bg-primary text-white pb-10    "
         
       >
-              <section className="w-full">
+              <section className="w-full flex lg:hidden">
             <Link to={ROUTES[0]}>
               <img
                 src={Logo}

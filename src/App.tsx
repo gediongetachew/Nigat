@@ -44,11 +44,11 @@ function App() {
   };
   return (
     <article>
-      <article className="absolute top-0 left-0 w-full bg-transparent flex items-center justify-start p-5 pr-10 font-trap-Regular font-[700]">
+      <article className="absolute top-0 left-0 w-full bg-transparent flex items-center justify-start p-5 pr-10 font-trap-Regular font-[700] z-[2000]">
   
         <section className={`w-[20%] lg:w-[30%] ${(pathname === ROUTES[2] || pathname === ROUTES[4] )? "flex" : "hidden" }  lg:flex`}>
           <Link to={ROUTES[0]}>
-            {pathname === ROUTES[1] || pathname === ROUTES[2] || pathname === ROUTES[4] ? (
+            {pathname === ROUTES[1] || pathname === ROUTES[2] || pathname === ROUTES[4]  ? (
               <img src={Logo2} alt="logo" className="w-[81px] lg:w-[203px] h-[27px] lg:h-[65px] " />
             ) : (
               <img
@@ -59,30 +59,38 @@ function App() {
             )}
           </Link>
         </section>
-        <section className="w-[80%] lg:w-[50%]  hidden lg:flex lg:justify-end ">
-        <ul className="pt-[2vh] w-full h-full   flex  items-center justify-between  pl-[5%] text-left uppercase leading-[42px]">
-            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+        <section className="w-[80%] lg:w-[60%]  hidden lg:flex lg:justify-end ">
+        <ul className="pt-[2vh] w-full h-full   flex  justify-between  pl-[5%] text-left uppercase leading-[42px]">
+            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer flex flex-row items-center gap-2">
+              <button className={` bg-secondary rounded-full w-[16px] h-[16px] ${ pathname === ROUTES[0] ? 'flex' : "hidden" }`} />
+                
+              
               <Link to={ROUTES[0]} >
                 Home
               </Link>
             </li>
-            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer flex items-center gap-2">
+            <button className={` bg-secondary rounded-full w-[16px] h-[16px] ${ pathname === ROUTES[1] ? 'flex' : "hidden" }`} />
               <Link to={ROUTES[1]} >
                 Who we are
               </Link>
             </li>
-            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer flex items-center gap-2">
+            <button className={` bg-secondary rounded-full w-[16px] h-[16px] ${ pathname === ROUTES[2] ? 'flex' : "hidden" }`} />
               <Link to={ROUTES[2]} >
                 Services
               </Link>
             </li>
-            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className="text-[15px] xl:text-[16px] text-secondary-light hover:text-secondary font-semibold cursor-pointer flex items-center gap-2">
+            <button className={` bg-secondary rounded-full w-[16px] h-[16px] ${ pathname === ROUTES[3] ? 'flex' : "hidden" }`} />
               <Link to={ROUTES[3]} >
                 COntact us
               </Link>
             </li>
-            <li className="text-[15px] xl:text-[16px] flex justify-between text-secondary-light hover:text-secondary font-semibold cursor-pointer">
+            <li className=" text-[15px] xl:text-[16px] flex justify-between items-center  text-secondary-light hover:text-secondary font-semibold cursor-pointer gap-2">
+            <button className={` bg-secondary rounded-full  w-[16px] h-[16px] ${ pathname === ROUTES[4] ? 'flex' : "hidden" }`} />
               <Link to={ROUTES[4]} >
+              
                 Order Now
               </Link>
              
