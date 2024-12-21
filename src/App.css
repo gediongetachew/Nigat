@@ -15,6 +15,24 @@
   background-size: "contain";
   background-position: "center";
 }
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #004F57; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* For Firefox */
+.scrollbar-thin {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #004F57 #e0e0e0; /* Thumb color and track color */
+}
 
 @font-face {
   font-family: "Trap Regular";
