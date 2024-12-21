@@ -8,20 +8,28 @@ import { ROUTES } from "../../util/data";
 const About = () => {
   const navigate = useNavigate();
   return (
-    <article className="px-[8%] mb-12 mt-0">
-      <article className="flex flex-col lg:flex-row justify-between items-center font-trap-Regular gap-x-10 mb-10 ">
-        <section className="lg:w-1/2">
-          <h6 className="uppercase text-[36px] lg:text-[96px] pb-6 xs: pt-20 text-secondary-light font-[700]">
-            who
+    <article className="px-[5%] mb-12 mt-12 w-full">
+      <article className="flex flex-col lg:flex-row justify-stretch   font-trap-Regular  mb-10 w-full ">
+        <section className="w-full lg:w-1/2 flex flex-col gap-5">
+          <h6 className="uppercase text-[36px] lg:text-[64px] pb-6 xs:pt-20 text-secondary-light font-[700]">
+            who we are ?
           </h6>
-          <p className="text-lg lg:text-[24px] text-primary font-[500]">
+          <p className="text-[15px] md:text-[20px] lg:text-[18px] xl:text-[24px] text-primary font-[500]">
             Ethiopian coffee experiences that delight the senses while promoting
             sustainable farming practices and community engagement. celebrated
             for our unique Ethiopian blends and commitment to ethical sourcing
             and sustainability.
           </p>
+          <p className="text-[15px] md:text-[20px] lg:text-[18px] xl:text-[24px] text-primary font-[500]">
+            Our name isn't just a word; it's a promise. A promise to be with you
+            from the very first sip of the morning, fueling your dreams,
+            conversations, and aspirations. With Nigat Coffee, we're not just
+            part of your morning; we’re part of your life.
+          </p>
+        </section>
+        <section className="flex w-full lg:w-1/2  justify-center">
           <div
-            className="mt-6 rounded-[30px] overflow-hidden  w-full lg:w-4/5 h-[25vh] xs:h-[15vh] lg:h-[25vh]"
+            className="mt-6 rounded-[30px] overflow-hidden  w-full lg:w-[42vw] h-[25vh] xs:h-[30vh] lg:h-[60vh]"
             style={{
               backgroundRepeat: "no-repeat",
               backgroundImage: `url(${BG})`,
@@ -33,30 +41,13 @@ const About = () => {
               className="hidden lg:block"
               style={{
                 backgroundRepeat: "no-repeat",
-                backgroundImage: `url(${BGtwo})`,
+
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100%",
                 width: "100%",
               }}
             />
-          </div>
-        </section>
-        <section className="lg:w-1/2 pt-10 lg:pt-[8rem]">
-          <h6 className="uppercase text-[36px] lg:text-[96px] pb-6 text-secondary-light font-[700]">
-            we are ?
-          </h6>
-          <div className="text-lg lg:text-[24px] text-primary font-[500]">
-            <p>1. Ethiopian coffee experiences that delight</p>
-            <p>
-              2. The senses while promoting sustainable farming practices and{" "}
-            </p>
-            <p>1. Ethiopian coffee experiences that delight</p>
-            <p>
-              3. Community engagement. celebrated for our unique Ethiopian
-              blends and{" "}
-            </p>
-            <p>4. Commitment to ethical sourcing and sustainability.</p>
           </div>
         </section>
       </article>

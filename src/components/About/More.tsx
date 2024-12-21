@@ -12,7 +12,7 @@ const More = () => {
 
   return (
     <article
-      className="py-[5vh] pl-[5%] lg:px-[8%] lg:pb-20 xl:h-[100vh] "
+      className="py-[5vh] pl-[5%] lg:px-[8%] lg:pb-20 "
       style={{
         width: "100%",
         backgroundRepeat: "no-repeat",
